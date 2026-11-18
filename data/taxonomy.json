@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Domain taxonomy for AI maintenance-request triage in student residences. Built from first-hand facilities experience. Urgency targets are project-defined guidelines, not official SLAs.",
   "routes": [
     {
@@ -160,6 +160,26 @@
               "when": "water spreading into other rooms"
             }
           ]
+        },
+        {
+          "id": "water_leak",
+          "label": "Water leak (toilet, sink, pipe)",
+          "type": "repair",
+          "default_urgency": "high",
+          "escalate": [
+            {
+              "to": "emergency",
+              "when": "flooding, or water spreading across the floor or into other rooms"
+            }
+          ]
+        },
+
+        {
+          "id": "toilet_running",
+          "label": "Toilet keeps running",
+          "type": "repair",
+          "default_urgency": "normal",
+          "escalate": [{ "to": "high", "when": "water overflowing or leaking" }]
         }
       ]
     },
@@ -190,6 +210,12 @@
               "when": "during a heat wave"
             }
           ]
+        },
+        {
+          "id": "heat_noisy",
+          "label": "Heater making noise but still working",
+          "type": "repair",
+          "default_urgency": "normal"
         }
       ]
     },
@@ -233,14 +259,15 @@
         {
           "id": "shared_bathroom_locked",
           "label": "Shared bathroom locked from the other side",
-          "type": "repair",
+          "type": "request",
           "default_urgency": "high",
           "escalate": [
             {
               "to": "emergency",
               "when": "resident has no other bathroom access"
             }
-          ]
+          ],
+          "notes": "Lock is not faulty; Facilities unlocks it. Type is request, not repair."
         }
       ]
     },
@@ -405,11 +432,11 @@
     },
     {
       "id": "environmental",
-      "label": "Mould & Odour",
+      "label": "Mold & Odour",
       "issues": [
         {
-          "id": "mould",
-          "label": "Mould",
+          "id": "mold",
+          "label": "Mold",
           "type": "repair",
           "default_urgency": "high"
         },

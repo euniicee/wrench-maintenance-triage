@@ -63,6 +63,18 @@ Bed height and chair changes are sometimes preferences and sometimes accessibili
 - Typos, slang, missing room numbers.
 - Duplicates: many residents reporting the same shared-space issue (laundry, kitchen, bins).
 
+## Labelling guidelines
+ 
+These rules keep the hand-labelled test set consistent. They were agreed after reviewing the first 15 labels.
+ 
+1. **Label only what the message says.** The AI sees only the message and its timestamp, so the label must too. It doesn't use outside knowledge ("it's probably the only toilet") and doesn't add tickets for problems the resident didn't mention.
+2. **Use taxonomy IDs exactly.** `category` and `issue` must match `data/taxonomy.json`. If nothing fits, don't invent an ID. Set `needs_review: true`, explain in `notes`, and propose a taxonomy change.
+3. **`needs_review` means triage can't be completed confidently.** That covers a missing location, an unclear issue, nothing in the taxonomy fitting, or a message that isn't a maintenance request. It does *not* mean "a technician should inspect it", because most repairs need inspection.
+4. **`needs_review` is always `true` or `false`, never `null`.**
+5. **Location format:** `room` is a string (`"108"`), because rooms can look like `"108B"`. `building` is the capitalized name (`"Maple"`), and comparisons ignore case. Fill in whatever the message gives and use `null` for the rest.
+6. **Same situation, same label.** If two messages describe the same thing, they get the same urgency.
+
+
 ## Open questions / assumptions
 
 - Heating season assumed to be Oct–Apr.
