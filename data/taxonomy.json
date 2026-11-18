@@ -1,0 +1,457 @@
+{
+  "version": "0.1.0",
+  "description": "Domain taxonomy for AI maintenance-request triage in student residences. Built from first-hand facilities experience. Urgency targets are project-defined guidelines, not official SLAs.",
+  "routes": [
+    {
+      "id": "facilities",
+      "label": "Facilities",
+      "description": "Default team for repairs, missing items and requests."
+    },
+    {
+      "id": "caretaking",
+      "label": "Caretaking",
+      "description": "Cleaning work. Assigned by Facilities, carried out by Caretaking."
+    },
+    {
+      "id": "service_centre",
+      "label": "Service Centre",
+      "description": "Lockouts and temporary keys. Not a maintenance job."
+    }
+  ],
+  "types": [
+    {
+      "id": "repair",
+      "label": "Repair",
+      "description": "Something exists but is broken or not working.",
+      "default_route": "facilities"
+    },
+    {
+      "id": "missing_item",
+      "label": "Missing item",
+      "description": "Something that should be in the room is not there.",
+      "default_route": "facilities"
+    },
+    {
+      "id": "request",
+      "label": "Request",
+      "description": "A change or adjustment the resident is asking for, not a fault.",
+      "default_route": "facilities"
+    },
+    {
+      "id": "cleaning",
+      "label": "Cleaning",
+      "description": "Needs cleaning rather than fixing.",
+      "default_route": "caretaking"
+    }
+  ],
+  "urgency_levels": [
+    {
+      "id": "emergency",
+      "rank": 4,
+      "label": "Emergency",
+      "target_response": "same day",
+      "description": "Safety, security, or loss of an essential service."
+    },
+    {
+      "id": "high",
+      "rank": 3,
+      "label": "High",
+      "target_response": "24-48 hours",
+      "description": "Significantly affects daily living."
+    },
+    {
+      "id": "normal",
+      "rank": 2,
+      "label": "Normal",
+      "target_response": "within 1 week",
+      "description": "Inconvenient but livable."
+    },
+    {
+      "id": "low",
+      "rank": 1,
+      "label": "Low",
+      "target_response": "scheduled",
+      "description": "Cosmetic, preference, or can be batched."
+    }
+  ],
+  "categories": [
+    {
+      "id": "electrical",
+      "label": "Electrical & Lighting",
+      "issues": [
+        {
+          "id": "bulb_out",
+          "label": "Light bulb not working",
+          "type": "repair",
+          "default_urgency": "normal",
+          "escalate": [
+            {
+              "to": "high",
+              "when": "no working light in the room at all"
+            }
+          ]
+        },
+        {
+          "id": "bulb_cover_missing",
+          "label": "Light fixture cover missing",
+          "type": "missing_item",
+          "default_urgency": "low"
+        },
+        {
+          "id": "socket_not_working",
+          "label": "Outlet not working",
+          "type": "repair",
+          "default_urgency": "high",
+          "escalate": [
+            {
+              "to": "emergency",
+              "when": "sparks, burning smell, scorch marks, or outlet is hot"
+            }
+          ]
+        },
+        {
+          "id": "socket_missing",
+          "label": "No outlet / missing outlet cover",
+          "type": "missing_item",
+          "default_urgency": "normal"
+        }
+      ]
+    },
+    {
+      "id": "plumbing",
+      "label": "Plumbing",
+      "issues": [
+        {
+          "id": "toilet_not_flushing",
+          "label": "Toilet not flushing",
+          "type": "repair",
+          "default_urgency": "high",
+          "escalate": [
+            {
+              "to": "emergency",
+              "when": "it is the only toilet available, or it is overflowing"
+            }
+          ]
+        },
+        {
+          "id": "sink_clogged",
+          "label": "Sink clogged",
+          "type": "repair",
+          "default_urgency": "normal",
+          "escalate": [
+            {
+              "to": "high",
+              "when": "standing water, or it is the only sink"
+            }
+          ]
+        },
+        {
+          "id": "shower_clogged",
+          "label": "Shower drain clogged",
+          "type": "repair",
+          "default_urgency": "normal",
+          "escalate": [
+            {
+              "to": "high",
+              "when": "water pooling outside the shower"
+            },
+            {
+              "to": "emergency",
+              "when": "water spreading into other rooms"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hvac",
+      "label": "Heating & Cooling",
+      "issues": [
+        {
+          "id": "heat_not_working",
+          "label": "Heater not working",
+          "type": "repair",
+          "default_urgency": "high",
+          "escalate": [
+            {
+              "to": "emergency",
+              "when": "no heat at all during heating season"
+            }
+          ]
+        },
+        {
+          "id": "ac_not_working",
+          "label": "AC not working",
+          "type": "repair",
+          "default_urgency": "normal",
+          "escalate": [
+            {
+              "to": "high",
+              "when": "during a heat wave"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "doors_access",
+      "label": "Doors, Locks & Access",
+      "issues": [
+        {
+          "id": "lockout",
+          "label": "Resident locked out",
+          "type": "request",
+          "default_urgency": "emergency",
+          "route": "service_centre",
+          "notes": "Resident is directed to the Service Centre for a temporary key. Not a maintenance job unless the lock itself is faulty."
+        },
+        {
+          "id": "key_not_working",
+          "label": "Key does not open the lock",
+          "type": "repair",
+          "default_urgency": "high",
+          "notes": "Lock or key fault. Resident may need a temporary key from the Service Centre in the meantime."
+        },
+        {
+          "id": "door_not_closing",
+          "label": "Door not closing or latching",
+          "type": "repair",
+          "default_urgency": "normal",
+          "escalate": [
+            {
+              "to": "emergency",
+              "when": "bedroom, suite or exterior door cannot be closed or locked"
+            }
+          ]
+        },
+        {
+          "id": "door_malfunction",
+          "label": "Door not working properly (other)",
+          "type": "repair",
+          "default_urgency": "normal"
+        },
+        {
+          "id": "shared_bathroom_locked",
+          "label": "Shared bathroom locked from the other side",
+          "type": "repair",
+          "default_urgency": "high",
+          "escalate": [
+            {
+              "to": "emergency",
+              "when": "resident has no other bathroom access"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "windows",
+      "label": "Windows",
+      "issues": [
+        {
+          "id": "blinds_broken",
+          "label": "Window blinds broken",
+          "type": "repair",
+          "default_urgency": "normal"
+        },
+        {
+          "id": "screen_damaged",
+          "label": "Window screen torn or missing",
+          "type": "repair",
+          "default_urgency": "normal",
+          "escalate": [
+            {
+              "to": "high",
+              "when": "warm months, or insects getting in"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "furniture_bedding",
+      "label": "Furniture & Bedding",
+      "issues": [
+        {
+          "id": "furniture_missing",
+          "label": "Furniture missing (chair, desk, etc.)",
+          "type": "missing_item",
+          "default_urgency": "normal"
+        },
+        {
+          "id": "mattress_issue",
+          "label": "Mattress torn, dirty or worn out",
+          "type": "repair",
+          "default_urgency": "normal",
+          "notes": "Resolved with a mattress cover or a replacement mattress."
+        },
+        {
+          "id": "bed_height_adjustment",
+          "label": "Bed height adjustment",
+          "type": "request",
+          "default_urgency": "low",
+          "accessibility_bump": "normal"
+        },
+        {
+          "id": "chair_change",
+          "label": "Chair change",
+          "type": "request",
+          "default_urgency": "low",
+          "accessibility_bump": "normal"
+        }
+      ]
+    },
+    {
+      "id": "appliances",
+      "label": "Appliances",
+      "issues": [
+        {
+          "id": "fridge_broken",
+          "label": "Fridge not working",
+          "type": "repair",
+          "default_urgency": "high"
+        },
+        {
+          "id": "stove_broken",
+          "label": "Stove or oven not working",
+          "type": "repair",
+          "default_urgency": "normal",
+          "escalate": [
+            {
+              "to": "emergency",
+              "when": "smell of gas"
+            }
+          ]
+        },
+        {
+          "id": "appliance_other",
+          "label": "Other appliance not working",
+          "type": "repair",
+          "default_urgency": "normal"
+        },
+        {
+          "id": "appliance_dirty",
+          "label": "Appliance marked or dirty (e.g. writing on fridge)",
+          "type": "cleaning",
+          "default_urgency": "low"
+        }
+      ]
+    },
+    {
+      "id": "kitchen_fixtures",
+      "label": "Kitchen Fixtures",
+      "issues": [
+        {
+          "id": "counter_broken",
+          "label": "Counter broken or needs adjusting",
+          "type": "repair",
+          "default_urgency": "normal"
+        },
+        {
+          "id": "cabinet_handle_missing",
+          "label": "Cabinet handle missing",
+          "type": "missing_item",
+          "default_urgency": "normal"
+        }
+      ]
+    },
+    {
+      "id": "walls_flooring",
+      "label": "Walls & Flooring",
+      "issues": [
+        {
+          "id": "wall_damage",
+          "label": "Wall needs patching",
+          "type": "repair",
+          "default_urgency": "low"
+        },
+        {
+          "id": "carpet_torn",
+          "label": "Carpet torn",
+          "type": "repair",
+          "default_urgency": "low",
+          "escalate": [
+            {
+              "to": "normal",
+              "when": "trip hazard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "waste",
+      "label": "Waste & Bins",
+      "issues": [
+        {
+          "id": "bin_missing",
+          "label": "Garbage or recycling bin missing",
+          "type": "missing_item",
+          "default_urgency": "normal"
+        },
+        {
+          "id": "bin_broken",
+          "label": "Bin broken",
+          "type": "repair",
+          "default_urgency": "normal"
+        },
+        {
+          "id": "bin_messy",
+          "label": "Bin area messy",
+          "type": "cleaning",
+          "default_urgency": "normal"
+        }
+      ]
+    },
+    {
+      "id": "environmental",
+      "label": "Mould & Odour",
+      "issues": [
+        {
+          "id": "mould",
+          "label": "Mould",
+          "type": "repair",
+          "default_urgency": "high"
+        },
+        {
+          "id": "foul_odour",
+          "label": "Foul smell, source unclear",
+          "type": "repair",
+          "default_urgency": "normal",
+          "escalate": [
+            {
+              "to": "high",
+              "when": "sewage smell"
+            },
+            {
+              "to": "emergency",
+              "when": "gas or rotten-egg smell"
+            }
+          ],
+          "notes": "Often needs a follow-up question to find the source."
+        }
+      ]
+    }
+  ],
+  "global_rules": {
+    "heating_season_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "emergency_signals": [
+      "sparks, burning smell, smoke",
+      "gas or rotten-egg smell",
+      "water spreading or flooding",
+      "resident cannot secure their room",
+      "no heat during heating season"
+    ],
+    "accessibility": "Set accessibility_flag only when the resident explicitly says the request is an accommodation or relates to a medical or accessibility need. Never infer it. Store the flag, not the details.",
+    "multiple_issues": "A single message can contain several issues. Split them into separate tickets.",
+    "unclear": "If the category or urgency cannot be determined with confidence, mark needs_review and suggest a follow-up question."
+  }
+}
