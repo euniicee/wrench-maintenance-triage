@@ -434,15 +434,7 @@
     }
   ],
   "global_rules": {
-    "heating_season_months": [
-      10,
-      11,
-      12,
-      1,
-      2,
-      3,
-      4
-    ],
+    "heating_season_months": [10, 11, 12, 1, 2, 3, 4],
     "emergency_signals": [
       "sparks, burning smell, smoke",
       "gas or rotten-egg smell",

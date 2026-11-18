@@ -1,0 +1,301 @@
+[
+  {
+    "id": "req_001",
+    "submitted_at": "2026-11-12T22:14:00",
+    "message": "toilet wont flush. its the only one in our suite. rm 108 maple",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_002",
+    "submitted_at": "2026-09-02T14:05:00",
+    "message": "Hi, I just moved in and there's no desk chair in my room. Room 312, Cedar Hall. Thanks!",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_003",
+    "submitted_at": "2026-11-15T23:41:00",
+    "message": "the outlet by my bed sparked when i plugged my charger in and now it smells like burning?? 205",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_004",
+    "submitted_at": "2026-10-08T19:30:00",
+    "message": "light in my room is out",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_005",
+    "submitted_at": "2026-09-05T10:12:00",
+    "message": "Good morning, I would like to request that my bed be raised. My accommodation letter says I need a higher bed. Maple 114",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_006",
+    "submitted_at": "2026-09-06T16:48:00",
+    "message": "can my bed be lowered pls its too high lol. birch 220",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_007",
+    "submitted_at": "2026-10-21T08:55:00",
+    "message": "My key isn't working on my door, it goes in but won't turn. I'm in room 401 Cedar, I got a temp key from the front desk for now.",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_008",
+    "submitted_at": "2026-11-01T01:22:00",
+    "message": "locked myself out of my room 😭 room 117 maple",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_009",
+    "submitted_at": "2026-11-14T11:03:00",
+    "message": "the person i share a bathroom with locked it from their side and theyve gone home for the weekend. i cant use the bathroom at all. birch 302",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_010",
+    "submitted_at": "2026-10-29T15:37:00",
+    "message": "There's black stuff growing on the ceiling in the bathroom corner, been there a couple weeks and getting bigger. 210 Cedar",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_011",
+    "submitted_at": "2026-11-09T18:20:00",
+    "message": "our kitchen smells really bad, not sure where its coming from. maple 2nd floor kitchen",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_012",
+    "submitted_at": "2026-11-16T17:52:00",
+    "message": "I think i smell gas near the stove in our kitchen?? cedar 3rd floor",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_013",
+    "submitted_at": "2026-10-03T09:15:00",
+    "message": "fridge in our suite stopped working, all our food is warm. 415 birch",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_014",
+    "submitted_at": "2026-11-02T13:44:00",
+    "message": "someone wrote all over the fridge with sharpie in the 1st floor kitchen. maple",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_015",
+    "submitted_at": "2026-10-13T20:10:00",
+    "message": "the recycling bin on our floor is overflowing and theres garbage everywhere around it. cedar 4th floor",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_016",
+    "submitted_at": "2026-09-04T12:30:00",
+    "message": "no garbage bin in my room. also the cabinet in the kitchen has no handle so i cant open it. room 109 birch",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_017",
+    "submitted_at": "2026-06-18T16:25:00",
+    "message": "the blinds are stuck halfway and the cord is broken, also there's a hole in the window screen and bugs keep coming in. its really hot this week. 318",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_018",
+    "submitted_at": "2027-01-11T07:40:00",
+    "message": "heater is making a loud banging noise every night but it still heats the room. room 222 maple",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_019",
+    "submitted_at": "2026-07-22T14:02:00",
+    "message": "AC isnt working, its like 32 degrees in here this week. cedar 507",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_020",
+    "submitted_at": "2026-10-17T22:58:00",
+    "message": "the shower is draining super slow and water is getting all over the bathroom floor. birch 201",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_021",
+    "submitted_at": "2026-11-05T10:00:00",
+    "message": "sink clogged",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_022",
+    "submitted_at": "2026-09-03T11:18:00",
+    "message": "Hello, my mattress has a big tear in it and there's a stain that was already there when I moved in. Could I get a new one? Room 306, Maple House.",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_023",
+    "submitted_at": "2026-11-11T02:37:00",
+    "message": "the thing in the bathroom wont stop running. 104",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_024",
+    "submitted_at": "2026-09-08T15:50:00",
+    "message": "the wall in my room has a bunch of holes from the last person's posters. not urgent. cedar 213",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_025",
+    "submitted_at": "2026-10-25T21:12:00",
+    "message": "the carpet in the hallway outside 3rd floor birch is ripped up and i almost tripped on it",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_026",
+    "submitted_at": "2026-10-30T12:26:00",
+    "message": "kitchen counter is loose and wobbles when you lean on it. maple 4th floor kitchen",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_027",
+    "submitted_at": "2026-11-13T23:05:00",
+    "message": "my door doesnt close all the way so i cant lock it at night. birch 110",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_028",
+    "submitted_at": "2026-09-10T09:33:00",
+    "message": "Hi! Could I swap my desk chair for one with back support? I'm registered with Student Accessibility Services. Maple 401",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_029",
+    "submitted_at": "2026-10-19T18:47:00",
+    "message": "the bulb cover in my room fell off and broke, bulb still works tho. also one of the stove burners doesnt turn on. 216 birch",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  },
+
+  {
+    "id": "req_030",
+    "submitted_at": "2026-11-17T20:15:00",
+    "message": "what time does the laundry room close on weekends?",
+    "location": { "building": null, "room": null },
+    "tickets": [],
+    "needs_review": null,
+    "notes": ""
+  }
+]
