@@ -3,7 +3,7 @@
     "id": "req_001",
     "submitted_at": "2026-11-12T22:14:00",
     "message": "toilet wont flush. its the only one in our suite. rm 108 maple",
-    "location": { "building": "maple", "room": 108 },
+    "location": { "building": "Maple", "room": "108", "area": null },
     "tickets": [
         {
             "category": "plumbing",
@@ -23,7 +23,7 @@
     "id": "req_002",
     "submitted_at": "2026-09-02T14:05:00",
     "message": "Hi, I just moved in and there's no desk chair in my room. Room 312, Cedar Hall. Thanks!",
-    "location": { "building": "Cedar", "room": 312 },
+    "location": { "building": "Cedar", "room": "312",  "area": null },
     "tickets": [
         {
             "category": "furniture_bedding",
@@ -42,7 +42,7 @@
     "id": "req_003",
     "submitted_at": "2026-11-15T23:41:00",
     "message": "the outlet by my bed sparked when i plugged my charger in and now it smells like burning?? 205",
-    "location": { "building": null, "room": 205 },
+    "location": { "building": null, "room": "205",  "area": null},
     "tickets": [
         {
             "category": "electrical",
@@ -61,7 +61,7 @@
     "id": "req_004",
     "submitted_at": "2026-10-08T19:30:00",
     "message": "light in my room is out",
-    "location": { "building": null, "room": null },
+    "location": { "building": null, "room": null,  "area": null },
     "tickets": [
         {
             "category": "electrical",
@@ -80,7 +80,7 @@
     "id": "req_005",
     "submitted_at": "2026-09-05T10:12:00",
     "message": "Good morning, I would like to request that my bed be raised. My accommodation letter says I need a higher bed. Maple 114",
-    "location": { "building": "Maple", "room": 114 },
+    "location": { "building": "Maple", "room": "114",  "area": null },
     "tickets": [
         {
         "category": "furniture_bedding",
@@ -98,7 +98,7 @@
     "id": "req_006",
     "submitted_at": "2026-09-06T16:48:00",
     "message": "can my bed be lowered pls its too high lol. birch 220",
-    "location": { "building": "Birch", "room": 220 },
+    "location": { "building": "Birch", "room": "220",  "area": null },
     "tickets": [
         {
             "category": "furniture_bedding",
@@ -117,7 +117,7 @@
     "id": "req_007",
     "submitted_at": "2026-10-21T08:55:00",
     "message": "My key isn't working on my door, it goes in but won't turn. I'm in room 401 Cedar, I got a temp key from the service centre desk for now.",
-    "location": { "building": "Cedar", "room": 401 },
+    "location": { "building": "Cedar", "room": "401",  "area": null},
     "tickets": [
         {
             "category": "doors_access",
@@ -129,14 +129,14 @@
         }
     ],
     "needs_review": false,
-    "notes": "Requires immediate attention. Key not working. Student has a temp key from the Service Centre Desk."
+    "notes": "Requires high attention. Key not working. Student has a temp key from the Service Centre Desk."
   },
 
   {
     "id": "req_008",
     "submitted_at": "2026-11-01T01:22:00",
     "message": "locked myself out of my room 😭 room 117 maple",
-    "location": { "building": "Maple", "room": 117 },
+    "location": { "building": "Maple", "room": "117",  "area": null},
     "tickets": [
         {
         "category": "doors_access",
@@ -154,7 +154,7 @@
     "id": "req_009",
     "submitted_at": "2026-11-14T11:03:00",
     "message": "the person i share a bathroom with locked it from their side and they've gone home for the weekend. i cant use the bathroom at all. birch 302",
-    "location": { "building": "Birch", "room": 302 },
+    "location": { "building": "Birch", "room": "302",  "area": null },
     "tickets": [
         {
             "category": "doors_access",
@@ -165,7 +165,7 @@
             "accessibility_flag": false
         }
     ],
-    "needs_review": true,
+    "needs_review": false,
     "notes": "This is a request not a repair because lock isn't faulty. However, it is an emergency because the student cannot use the bathroom at all."
   },
 
@@ -173,7 +173,7 @@
     "id": "req_010",
     "submitted_at": "2026-10-29T15:37:00",
     "message": "There's black stuff growing on the ceiling in the bathroom corner, been there a couple weeks and getting bigger. 210 Cedar",
-    "location": { "building": "Cedar", "room": 210 },
+    "location": { "building": "Cedar", "room": "210",  "area": null },
     "tickets": [
         {
             "category": "environmental",
@@ -192,13 +192,14 @@
     "id": "req_011",
     "submitted_at": "2026-11-09T18:20:00",
     "message": "our kitchen smells really bad, not sure where its coming from. maple 2nd floor kitchen",
-    "location": { "building": "Maple", "room": null },
+    "location": { "building": "Maple", "room": null, "area": "2nd floor kitchen"},
     "tickets": [
       {
         "category":"environmental",
         "issue": "foul_odour",
         "type": "repair",
         "urgency": "normal",
+        "route": "facilities",
         "accessibility_flag":false
       }
     ],
@@ -210,14 +211,15 @@
     "id": "req_012",
     "submitted_at": "2026-11-16T17:52:00",
     "message": "I think i smell gas near the stove in our kitchen?? cedar 3rd floor",
-    "location": { "building": null, "room": null },
+    "location": { "building": "Cedar", "room": null, "area": "3rd floor kitchen" },
     "tickets": [
       {
         "category":"environmental",
         "issue": "foul_odour",
         "type": "repair",
         "urgency": "emergency",
-        "accessibility_flag": ""
+        "route": "facilities",
+        "accessibility_flag": false
       }
     ],
     "needs_review": false,
@@ -228,13 +230,14 @@
     "id": "req_013",
     "submitted_at": "2026-10-03T09:15:00",
     "message": "fridge in our suite stopped working, all our food is warm. 415 birch",
-    "location": { "building": "Birch", "room": 415 },
+    "location": { "building": "Birch", "room": "415",  "area": null  },
     "tickets": [
       {
         "category": "appliances",
         "issue": "fridge_broken",
         "type": "repair",
         "urgency": "high",
+        "route": "facilities",
         "accessibility_flag": false
       }
     ],
@@ -246,13 +249,14 @@
     "id": "req_014",
     "submitted_at": "2026-11-02T13:44:00",
     "message": "someone wrote all over the fridge with sharpie in the 1st floor kitchen. maple",
-    "location": { "building": "Maple", "room": null },
+    "location": { "building": "Maple", "room": null, "area": "1st floor kitchen" },
     "tickets": [
       {
         "category": "appliances",
         "issue": "appliance_dirty",
         "type": "cleaning",
         "urgency": "low",
+        "route": "caretaking",
         "accessibility_flag": false
       }
     ],
@@ -264,13 +268,14 @@
     "id": "req_015",
     "submitted_at": "2026-10-13T20:10:00",
     "message": "the recycling bin on our floor is overflowing and theres garbage everywhere around it. cedar 4th floor",
-    "location": { "building": "Cedar", "room": null },
+    "location": { "building": "Cedar", "room": null, "area": "4th floor" },
     "tickets": [
       {
         "category": "waste",
         "issue": "bin_messy",
         "type": "cleaning",
         "urgency": "normal",
+        "route": "caretaking",
         "accessibility_flag": false
       }
     ],
@@ -282,13 +287,14 @@
     "id": "req_016",
     "submitted_at": "2026-09-04T12:30:00",
     "message": "no garbage bin in my room. also the cabinet in the kitchen has no handle so i cant open it. room 109 birch",
-    "location": { "building": "Birch", "room": 109 },
+    "location": { "building": "Birch", "room": "109",   "area": null  },
     "tickets": [
       {
         "category": "waste",
         "issue": "bin_missing",
         "type": "missing_item",
         "urgency": "normal",
+        "route": "facilities",
         "accessibility_flag": false
       },
 
@@ -297,6 +303,7 @@
         "issue": "cabinet_handle_missing",
         "type": "missing_item",
         "urgency": "normal",
+        "route": "facilities",
         "accessibility_flag": false
       }
     ],
@@ -308,13 +315,14 @@
     "id": "req_017",
     "submitted_at": "2026-06-18T16:25:00",
     "message": "the blinds are stuck halfway and the cord is broken, also there's a hole in the window screen and bugs keep coming in. its really hot this week. 318",
-    "location": { "building": null, "room": 318 },
+    "location": { "building": null, "room": "318",  "area": null },
     "tickets": [
       {
         "category": "windows",
         "issue": "blinds_broken",
         "type": "repair",
         "urgency": "normal",
+        "route": "facilities",
         "accessibility_flag": false
       },
 
@@ -323,10 +331,11 @@
         "issue": "screen_damaged",
         "type": "repair",
         "urgency": "high",
+        "route": "facilities",
         "accessibility_flag": false
       }
     ],
-    "needs_review": false,
+    "needs_review": true,
     "notes": "We need to find out what room it is. We don't have the exact location. High priority should be given as it is hot and insects are getting in."
   },
 
@@ -334,17 +343,18 @@
     "id": "req_018",
     "submitted_at": "2027-01-11T07:40:00",
     "message": "heater is making a loud banging noise every night but it still heats the room. room 222 maple",
-    "location": { "building": "Maple", "room": 222 },
+    "location": { "building": "Maple", "room": "222",  "area": null },
     "tickets": [
       {
         "category": "hvac",
         "issue": "heat_noisy",
         "type": "repair",
         "urgency": "normal",
+        "route": "facilities",
         "accessibility_flag": false
       }
     ],
-    "needs_review": true,
+    "needs_review": false,
     "notes": "The heater works but it is just loud. We'll need to manually review it. "
   },
 
@@ -352,13 +362,14 @@
     "id": "req_019",
     "submitted_at": "2026-07-22T14:02:00",
     "message": "AC isnt working, its like 32 degrees in here this week. cedar 507",
-    "location": { "building": "Cedar", "room": 507 },
+    "location": { "building": "Cedar", "room": "507",  "area": null  },
     "tickets": [
       {
         "category": "hvac",
         "issue": "ac_not_working",
         "type": "repair",
         "urgency": "high",
+        "route": "facilities",
         "accessibility_flag": false
       }
     ],
@@ -370,13 +381,14 @@
     "id": "req_020",
     "submitted_at": "2026-10-17T22:58:00",
     "message": "the shower is draining super slow and water is getting all over the bathroom floor. birch 201",
-    "location": { "building": "Birch", "room": 201 },
+    "location": { "building": "Birch", "room": "201",  "area": null },
     "tickets": [
       {
         "category": "plumbing",
         "issue": "shower_clogged",
         "type": "repair",
         "urgency": "high",
+        "route": "facilities",
         "accessibility_flag": false
       }
     ],
@@ -388,31 +400,33 @@
     "id": "req_021",
     "submitted_at": "2026-11-05T10:00:00",
     "message": "sink clogged",
-    "location": { "building": null, "room": null },
+    "location": { "building": null, "room": null,  "area": null },
     "tickets": [
       {
         "category": "plumbing",
         "issue": "sink_clogged",
         "type": "repair",
         "urgency": "normal",
+        "route": "facilities",
         "accessibility_flag": false
       }
     ],
-    "needs_review": false,
-    "notes": "We need more information, about the building and whether it is the only shower or not, so we know if we should attend to it faster."
+    "needs_review": true,
+    "notes": "We need more information, about the building and whether it is the only sink or not, so we know if we should attend to it faster."
   },
 
   {
     "id": "req_022",
     "submitted_at": "2026-09-03T11:18:00",
     "message": "Hello, my mattress has a big tear in it and there's a stain that was already there when I moved in. Could I get a new one? Room 306, Maple House.",
-    "location": { "building": "Maple", "room": 306 },
+    "location": { "building": "Maple", "room": "306",  "area": null },
     "tickets": [
       {
         "category": "furniture_bedding",
         "issue": "mattress_issue",
         "type": "repair",
         "urgency": "normal",
+        "route": "facilities",
         "accessibility_flag": false
       }
     ],
@@ -424,13 +438,14 @@
     "id": "req_023",
     "submitted_at": "2026-11-11T02:37:00",
     "message": "the thing in the bathroom wont stop running. 104",
-    "location": { "building": null, "room": 104 },
+    "location": { "building": null, "room": "104",  "area": null },
     "tickets": [
       {
         "category": "plumbing",
         "issue": "toilet_running",
         "type": "repair",
-        "urgency": "high",
+        "urgency": "normal",
+        "route": "facilities",
         "accessibility_flag": false
       }
     ],
@@ -442,13 +457,14 @@
     "id": "req_024",
     "submitted_at": "2026-09-08T15:50:00",
     "message": "the wall in my room has a bunch of holes from the last person's posters. not urgent. cedar 213",
-    "location": { "building": "Cedar", "room": 213 },
+    "location": { "building": "Cedar", "room": "213",  "area": null },
     "tickets": [
       {
         "category": "walls_flooring",
         "issue": "wall_damage",
         "type": "repair",
         "urgency": "low",
+        "route": "facilities",
         "accessibility_flag": false
       }
     ],
@@ -460,13 +476,14 @@
     "id": "req_025",
     "submitted_at": "2026-10-25T21:12:00",
     "message": "the carpet in the hallway outside 3rd floor birch is ripped up and i almost tripped on it",
-    "location": { "building": "Birch", "room": null },
+    "location": { "building": "Birch", "room": null, "area": "3rd floor" },
     "tickets": [
       {
         "category": "walls_flooring",
         "issue": "carpet_torn",
         "type": "repair",
         "urgency": "normal",
+        "route": "facilities",
         "accessibility_flag": false
       }
     ],
@@ -478,13 +495,14 @@
     "id": "req_026",
     "submitted_at": "2026-10-30T12:26:00",
     "message": "kitchen counter is loose and wobbles when you lean on it. maple 4th floor kitchen",
-    "location": { "building": "Maple", "room": null },
+    "location": { "building": "Maple", "room": null, "area": "4th floor kitchen" },
     "tickets": [
       {
         "category": "kitchen_fixtures",
         "issue": "counter_broken",
         "type": "repair",
         "urgency": "normal",
+        "route": "facilities",
         "accessibility_flag": false
       }
     ],
@@ -496,13 +514,14 @@
     "id": "req_027",
     "submitted_at": "2026-11-13T23:05:00",
     "message": "my door doesnt close all the way so i cant lock it at night. birch 110",
-    "location": { "building": "Birch", "room": 110 },
+    "location": { "building": "Birch", "room": "110",  "area": null  },
     "tickets": [
       {
         "category": "doors_access",
         "issue": "door_not_closing",
         "type": "repair",
         "urgency": "emergency",
+        "route": "facilities",
         "accessibility_flag": false
       }
     ],
@@ -514,13 +533,14 @@
     "id": "req_028",
     "submitted_at": "2026-09-10T09:33:00",
     "message": "Hi! Could I swap my desk chair for one with back support? I'm registered with Student Accessibility Services. Maple 401",
-    "location": { "building": "Maple", "room": 401 },
+    "location": { "building": "Maple", "room": "401",  "area": null },
     "tickets": [
       {
         "category": "furniture_bedding",
         "issue": "chair_change",
         "type": "request",
         "urgency": "normal",
+        "route": "facilities",
         "accessibility_flag": true
       }
     ],
@@ -531,14 +551,15 @@
   {
     "id": "req_029",
     "submitted_at": "2026-10-19T18:47:00",
-    "message": "the bulb cover in my room fell off and broke, bulb still works tho. also one of the stove burners doesnt turn on. 216 birch",
-    "location": { "building": "Birch", "room": 216 },
+    "message": "the bulb cover in my room fell off and broke, bulb still works tho. also one of the stove burners doesn't turn on. 216 birch",
+    "location": { "building": "Birch", "room": "216",  "area": null },
     "tickets": [
       {
         "category": "electrical",
         "issue": "bulb_cover_missing",
         "type": "missing_item",
         "urgency": "low",
+        "route": "facilities",
         "accessibility_flag": false
       },
 
@@ -547,6 +568,7 @@
         "issue": "stove_broken",
         "type": "repair",
         "urgency": "normal",
+        "route": "facilities",
         "accessibility_flag": false
       }
     ],
@@ -558,17 +580,17 @@
     "id": "req_030",
     "submitted_at": "2026-04-17T20:15:00",
     "message": "what time does the laundry room close on weekends?",
-    "location": { "building": null, "room": null },
+    "location": { "building": null, "room": null,  "area": null },
     "tickets": [],
     "needs_review": true,
-    "notes": "Not a maintenance request, but a general inquiry. should be directed "
+    "notes": "Not a maintenance request, but a general inquiry. should be directed to the Service Centre "
   },
 
   {
     "id": "req_031",
     "submitted_at": "2026-06-18T09:30:00",
     "message": "Hi. Our toilet is not flushing and seems clogged. We have tried using a plunger but it didn't work. Could you please send someone to fix it? Room 210, Maple Hall.",
-    "location": { "building": "Maple", "room": 210 },
+    "location": { "building": "Maple", "room": "210",  "area": null },
     "tickets": [
         {
             "category": "plumbing",
@@ -579,7 +601,7 @@
             "accessibility_flag": false
           }
      ],
-    "needs_review": true,
+    "needs_review": false,
     "notes": "We need to know if it's the only toilet in the suite."
 },
 
@@ -587,7 +609,7 @@
     "id":"req_032",
     "submitted_at":"2026-07-19T14:45:00",
     "message": "Hi. I noticed that I have a lot of bugs coming into my room. I have tried to manage this situation but they keep coming back and it's bothering me a lot. I think there's a hole in the window screen. Could you please send someone to fix it? Room 318, Birch Hall.",
-    "location": { "building": "Birch", "room": 318 },
+    "location": { "building": "Birch", "room": "318",  "area": null },
     "tickets": [
        {
             "category": "windows",
@@ -598,7 +620,7 @@
             "accessibility_flag": false
         }
 ],
-    "needs_review": true,
+    "needs_review": false,
     "notes": "Window screen needs to be inspected. Situation is urgent as it's bothering the student."
 },
 
@@ -606,17 +628,9 @@
     "id":"req_033",
     "submitted_at":"2026-08-20T08:30:00",
     "message": "Hi. I have a request to have my bed lowered. I am registered with Student Accessibility Services and my accommodation letter states that I need a lower bed. Room 220, Birch Hall.",
-    "location": { "building": "Birch", "room": 220 },
+    "location": { "building": "Birch", "room": "220",  "area": null },
     "tickets": [
-        {
-            "category": "furniture_bedding",
-            "issue": "mattress_issue",
-            "type": "request",
-            "urgency": "low",
-            "route": "facilities",
-            "accessibility_flag": false
-        },
-
+       
         {
             "category": "furniture_bedding",
             "issue": "bed_height_adjustment",
@@ -626,7 +640,7 @@
             "accessibility_flag": true
         }
 ],
-    "needs_review": true,
+    "needs_review": false,
     "notes": "Bed needs to be inspected first for any issues with mattress. Low urgency request for height adjustment."
 },
 
@@ -636,7 +650,7 @@
     "id":"req_034",
     "submitted_at":"2026-05-21T11:15:00",
     "message": "Hi. My key doesn't work for my room door. I've been to the Service centre and they confirmed it's the right key, but it's not working. Room 401, Maple Hall.",
-    "location": { "building": "Maple", "room": 401 },
+    "location": { "building": "Maple", "room": "401",  "area": null },
     "tickets": [
         {
             "category": "doors_access",
@@ -647,7 +661,7 @@
             "accessibility_flag": false
         }
 ],
-    "needs_review": true,
+    "needs_review": false,
     "notes": "Key needs to be inspected first for any potential issues since the Service Centre confirmed it's the right key.. Normal request for replacement."
 },
 
@@ -655,7 +669,7 @@
     "id":"req_035",
     "submitted_at":"2026-07-22T15:00:00",
     "message": "Hi. There's a leak in our bathroom anytime we flush the toilet and it has flooded the bathroom, can you send someone to come look at it? Room 401, Maple Hall.",
-    "location": { "building": "Maple", "room": 401 },
+    "location": { "building": "Maple", "room": "401",  "area": null },
     "tickets": [
         {
             "category": "plumbing",
@@ -666,7 +680,7 @@
             "accessibility_flag": false
         } 
 ],
-    "needs_review": true,
+    "needs_review": false,
     "notes": "Toilet leaks when flushed and needs immediate attention, so it doesn't flood the whole apartment. Emergency request for repair."
 }
 ]
